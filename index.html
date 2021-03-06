@@ -2,28 +2,44 @@
 <html>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    
     <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
     <body style="margin : 0px; overflow: hidden;">
+        <button onclick="playVid()" type="button">Play Video</button>
         <a-scene embedded arjs>
+          
         <a-marker preset="hiro">
             <a-entity
             position="0 -1 0"
             scale="0.15 0.15 0.15"
+            id="camera" 
+            camera="userHeight: 1.6" 
+            look-controls 
+            cursor="rayOrigin: mouse"
             <a-assets>
- <video id="penguin-sledding" autoplay loop="true" src="heart_1.mp4" webkit-playsinline playsinline></video>
-     <!-- <video id="penguin-sledding" autoplay loop="true" src="heart_1.mp4" webkit-playsinline playsinline></video> -->
-             <img id="my-image" src="test.jpg">
+ <video id="heart" autoplay="false" controls="controls" loop="true" src="heart_1.mp4" webkit-playsinline playsinline></video>
+  
    </a-assets>
 
    <!-- Using the asset management system. -->
 
-   <!--   <a-video src="#penguin-sledding" width="16" height="9" position="0 10 -10"></a-video> -->
- <a-image src="#my-image" width="16" height="16" position="0 10 -10"></a-image>
+   <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow
+               event-set__enter="_event: mouseenter; color: #026fc9"
+               event-set__leave="_event: mouseleave; color: #4CC3D9">
+    <a-video src="#heart" width="16" height="9" position="0 10 -10" begin="click"></a-video></a-box>
+
   
             ></a-entity>
         </a-marker>
-        <a-entity camera></a-entity>
         </a-scene>
+<script> 
+var vid = document.getElementById("heart"); 
+
+function playVid() { 
+  vid.play(); 
+} 
+</script> 
     </body>
 </html>
