@@ -4,22 +4,18 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     
     <!-- we import arjs version without NFT but with marker + location based support -->
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-     <script>
-    window.onload = function () {
-      document
-        .querySelector(".button")
-        .addEventListener("click", function () {
-          // here you can change also a-scene or a-entity properties, like
-          // changing your 3D model source, size, position and so on
-          // or you can just open links, trigger actions...
-          var vid = document.getElementById("heart"); 
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script> 
+    <script> 
+var vid = document.getElementById("heart"); 
 
 function playVid() { 
   vid.play(); 
-        });
-    }; 
-  </script>
+} 
+
+function pauseVid() { 
+  vid.pause(); 
+} 
+</script> 
     <style>
       .buttons {
         position: absolute;
@@ -45,7 +41,7 @@ function playVid() {
     </style>
     
     <div class="buttons">
-    <button class="button">Play Video</button>
+    <button class= "button" onclick="playVid()" type="button">Play Video</button>
     </div>
   
     <body style="margin : 0px; overflow: hidden;">
