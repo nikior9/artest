@@ -6,12 +6,13 @@
     <body style="margin : 0px; overflow: hidden;">
         <a-scene embedded arjs>
         <a-marker preset="hiro">
-            <a-video src="https://sxyprn.com/cdn8/s22/2190x9tzq9o5wzn8o4kzf1l6o/yPAAjdMK0XJJ-eNd4UNjqw/1615000634/e5ofpfl1yan4ocz8q3s1j619t36/9h56flfld956bpbqa25tbuc6748.vid"></a-video>
+            <a-entity
+            position="0 -1 0"
+            scale="0.05 0.05 0.05"
+            gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
+            ></a-entity>
         </a-marker>
-        <a-video></a-video>
+        <a-entity camera></a-entity>
         </a-scene>
     </body>
 </html>
-
-
-
