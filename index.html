@@ -7,7 +7,6 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
     <body style="margin : 0px; overflow: hidden;">
-        <button onclick="playVid()" type="button">Play Video</button>
         <a-scene embedded arjs>
           
         <a-marker preset="hiro">
@@ -19,7 +18,7 @@
             look-controls 
             cursor="rayOrigin: mouse"
             <a-assets>
- <video id="heart" autoplay="false" controls="controls" loop="true" src="heart_1.mp4" webkit-playsinline playsinline></video>
+ <video id="heart" autoplay loop="true" src="heart_1.mp4" webkit-playsinline playsinline></video>
   
    </a-assets>
 
@@ -34,12 +33,6 @@
             ></a-entity>
         </a-marker>
         </a-scene>
-<script> 
-var vid = document.getElementById("heart"); 
 
-function playVid() { 
-  vid.play(); 
-} 
-</script> 
     </body>
 </html>
