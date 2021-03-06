@@ -5,6 +5,38 @@
     
     <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script>  var vid = document.getElementById("heart"); 
+    function playVid() { 
+      vid.play(); 
+    } </script> 
+    <style>
+      .buttons {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+      }
+
+      .button {
+        padding: 0.25em;
+        border-radius: 4px;
+        border: none;
+        background: white;
+        color: black;
+        width: 4em;
+        height: 2em;
+      }
+    </style>
+    
+    <div class="buttons">
+    <button onclick="playVid()" type="button">Play Video</button>
+    </div>
+  
     <body style="margin : 0px; overflow: hidden;">
         
         <a-scene embedded arjs>
@@ -15,19 +47,13 @@
             scale="0.15 0.15 0.15"
             <a-assets>
  <video id="heart" autoplay controls="controls" loop="true" src="heart_1.mp4" webkit-playsinline playsinline></video>
-  <button onclick="playVid()" type="button">Play Video</button>
+
    </a-assets>
 
    <!-- Using the asset management system. -->
 
  <a-video src="#heart" width="16" height="9" position="0 10 -10"></a-video>
- <script> 
- var vid = document.getElementById("heart"); 
 
- function playVid() { 
-   vid.play(); 
- } 
- </script> 
   
             ></a-entity>
         </a-marker>
