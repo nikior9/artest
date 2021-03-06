@@ -2,7 +2,7 @@
 <html>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
-    <script src="dist/iphone-inline-video.min.js"></script>
+    
     <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <body style="margin : 0px; overflow: hidden;">
@@ -12,13 +12,13 @@
             position="0 -1 0"
             scale="0.15 0.15 0.15"
             <a-assets>
- <video id="penguin-sledding" autoplay loop="true" src="heart_1.mp4" webkit-playsinline playsinline></video>
+ <video id="heart" autoplay muted loop="true" src="heart_1.mp4" webkit-playsinline playsinline></video>
   
    </a-assets>
 
    <!-- Using the asset management system. -->
 
- <a-video src="#penguin-sledding" width="16" height="9" position="0 10 -10"></a-video>
+ <a-video src="#heart" width="16" height="9" position="0 10 -10"></a-video>
 
   
             ></a-entity>
