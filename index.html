@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <body style="margin : 0px; overflow: hidden;">
+        <button onclick="playVid()" type="button">Play Video</button>
+        <a-scene embedded arjs>
+        <a-marker preset="hiro">
+            <a-entity
+            position="0 -1 0"
+            scale="0.15 0.15 0.15"
+                
+            <a-assets>
+    <a-asset-item id="buni-mtl" src="/nik,grv3.mtl"></a-asset-item>
+    <a-asset-item id="buni-obj" src="/nik,grv3.obj"></a-asset-item>
+  </a-assets>
+            obj-model="obj: #buni-obj; mtl: #buni-mtl"
+   <!-- Using the asset management system. -->
+
+ <a-video src="#heart" width="16" height="9" position="0 10 -10"></a-video>
+
+  
+            ></a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+        </a-scene>
+
+    </body>
+</html>
