@@ -8,14 +8,14 @@
     <body style="margin : 0px; overflow: hidden;">
         
         <a-scene embedded arjs>
-          <button onclick="playVid()" type="button">Play Video</button>
+          
         <a-marker preset="hiro">
             <a-entity
             position="0 -1 0"
             scale="0.15 0.15 0.15"
             <a-assets>
  <video id="heart" autoplay controls="controls" loop="true" src="heart_1.mp4" webkit-playsinline playsinline></video>
-  
+  <button onclick="playVid()" type="button">Play Video</button>
    </a-assets>
 
    <!-- Using the asset management system. -->
