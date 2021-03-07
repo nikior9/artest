@@ -6,14 +6,15 @@
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
       <a-marker preset="hiro">
-        <a-entity
-          position="0 0 2"
-          scale="1 1 1"
-          obj-model="obj: url(https://github.com/nikior9/artest/blob/bc5a5e6b7a741cd260b0f02a27d26023ef2d9606/nik,grv3.obj); 
-            mtl: url(https://github.com/nikior9/artest/blob/bc5a5e6b7a741cd260b0f02a27d26023ef2d9606/nik,grv3.mtl)"
-        ></a-entity>
+        <a-assets>          
+  <a-asset-item id="buni-mtl" src="/nik,grv3.mtl"></a-asset-item>
+  <a-asset-item id="buni-obj" src="/nik,grv3.obj"></a-asset-item>
+  </a-assets>
+<a-entity obj-model="obj: #buni-obj; mtl: #buni-mtl"></a-entity>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
+
+
